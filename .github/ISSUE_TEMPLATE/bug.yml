@@ -1,0 +1,56 @@
+name: Fehler
+description: Etwas verhält sich anders als spezifiziert
+title: "fix: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: steps
+    attributes:
+      label: Schritte zum Nachstellen
+      placeholder: "1. …\n2. …\n3. …"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Erwartetes Verhalten
+      description: Wenn möglich mit betroffenem Akzeptanzkriterium (z. B. F-002 AC-03)
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Tatsächliches Verhalten
+    validations:
+      required: true
+  - type: input
+    id: affected-ac
+    attributes:
+      label: Betroffenes Feature / AC
+      placeholder: F-002 AC-03
+  - type: input
+    id: android
+    attributes:
+      label: Android-Version und Gerät
+      placeholder: Android 12, Gerätemodell / Emulator API 36
+    validations:
+      required: true
+  - type: input
+    id: app-version
+    attributes:
+      label: App-Version / Commit / Update-ID
+  - type: dropdown
+    id: runtime
+    attributes:
+      label: Laufzeitumgebung
+      options:
+        - Expo Go
+        - Development Build
+        - Release-APK
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Weitere Hinweise
+      description: Screenshots, Logs (keine persönlichen Daten)
