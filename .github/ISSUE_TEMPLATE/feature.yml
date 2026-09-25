@@ -1,0 +1,51 @@
+name: Feature / Umsetzungsschritt
+description: Ein Feature aus dem Backlog oder ein Schritt aus dem Umsetzungsplan
+title: "feat(F-xxx): "
+labels: ["feature"]
+body:
+  - type: input
+    id: feature-id
+    attributes:
+      label: Feature-ID und Schritt
+      description: z. B. F-002 / S5
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Ziel
+      description: Was soll nach diesem Issue für die nutzende Person möglich sein?
+    validations:
+      required: true
+  - type: input
+    id: spec
+    attributes:
+      label: Spezifikation
+      description: Link zur Datei in docs/features/
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Akzeptanzkriterien
+      description: Betroffene AC-IDs (Details in der Spezifikation)
+      placeholder: "- [ ] AC-01\n- [ ] AC-02"
+    validations:
+      required: true
+  - type: textarea
+    id: tests
+    attributes:
+      label: Tests
+      description: Test-IDs aus der Testmatrix, die in diesem Issue entstehen
+      placeholder: "- [ ] T-06 (Komponente)\n- [ ] T-07 (Komponente)"
+    validations:
+      required: true
+  - type: textarea
+    id: prerequisites
+    attributes:
+      label: Voraussetzungen
+      description: Welche Issues oder Schritte müssen vorher gemergt sein?
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risiken und offene Punkte
